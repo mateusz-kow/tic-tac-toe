@@ -16,10 +16,11 @@ public class Tile : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
-    private void OnClick()
+    public void OnClick()
     {
         controller.OnTileClicked(x, y, this);
     }
+
     [SerializeField] private Image symbolImage;
     [SerializeField] private Sprite xSprite;
     [SerializeField] private Sprite oSprite;
